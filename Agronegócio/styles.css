@@ -1,0 +1,251 @@
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Inovacao.png'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra toda a área de fundo */
+    background-position: center center; /* Centraliza a imagem de fundo */
+    background-attachment: fixed; /* Mantém a imagem fixa quando a página é rolada */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-color: #f0f0f0; /* Cor de fundo de reserva, caso a imagem não carregue */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header-icon {
+    margin-right: 20px; /* Ajuste a margem conforme necessário */
+}
+
+.header-icon .logo {
+    width: 40px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.titulopagina {
+    flex: 1; /* Ocupa o espaço disponível restante */
+}
+
+.titulopagina h1 {
+    margin: 0; /* Remove a margem padrão do <h1> */
+}
+
+/* Estilos do menu */
+.menu-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #333;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-menu ul li {
+        margin: 0;
+    }
+
+    .nav-menu ul li a {
+        padding: 10px;
+        display: block;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+}
+
+/* Estilos da seção de informações */
+.info-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 80px auto 20px; /* Ajusta a margem superior e inferior */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.innovation-tech {
+    background-color: #f8f9fa; /* Fundo claro com sombra */
+    border: 1px solid #e9ecef; /* Borda clara */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    padding: 20px;
+    text-align: justify;
+}
+
+.section-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Estilos do quiz */
+.quiz-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Margem superior e inferior para separar das outras seções */
+}
+
+.quiz-container {
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra à caixa do quiz */
+    transition: background-color 0.5s;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.options label {
+    display: block;
+    margin: 10px 0;
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Estilos para as imagens */
+.images-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre as imagens */
+    margin: 20px auto; /* Margem superior e inferior para separar das outras seções */
+}
+
+.image-container {
+    flex: 1;
+    max-width: 45%; /* Limita a largura máxima das imagens */
+}
+
+.image-container img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do contêiner */
+    border-radius: 8px; /* Bordas arredondadas para as imagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra nas imagens */
+}
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: #333; /* Cor de fundo escura para contraste */
+    color: white; /* Texto branco para contraste com o fundo */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    position: relative; /* Posicionamento relativo */
+    bottom: 0; /* Fica no fundo da página */
+    width: 100%; /* Largura completa */
+}
+
+.footer-content a {
+    color: #f8f9fa; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+.footer-content a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+.footer p {
+    margin: 5px 0; /* Margens superiores e inferiores */
+}
